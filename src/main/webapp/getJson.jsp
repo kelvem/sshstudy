@@ -57,6 +57,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				//alert("data.jsonData : " + data.jsonData);
 				var json = eval(data.jsonData);
 				//alert("json: " + json);
+				alert(data.jsonData.msg);
 				$('#alert_msg').text(json.msg);
 
 				$('#myModal').modal({
@@ -82,7 +83,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	
 <div class="container-fluid">
 	
-	
+	<a href="javascript:getJson()">getJson()</a>
 	<div class="row-fluid">
 		<div class="span9">
 			<div id="tabs-940234" class="tabbable">
