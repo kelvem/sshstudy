@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.kelvem.common.KLog;
+import com.kelvem.common.utils.KLog;
 
 public class SchemaModel {
 

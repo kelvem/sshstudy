@@ -3,10 +3,8 @@
  */
 package com.kelvem.common.database.model;
 
-import java.math.BigDecimal;
-
-import com.kelvem.common.KLog;
-import com.kelvem.common.ObjectUtil;
+import com.kelvem.common.utils.KLog;
+import com.kelvem.common.utils.ObjectUtil;
 
 /**
  * @author kelvem

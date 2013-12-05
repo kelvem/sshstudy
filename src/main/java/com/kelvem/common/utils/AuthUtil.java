@@ -6,7 +6,6 @@ package com.kelvem.common.utils;
 import java.util.Date;
 
 import com.kelvem.common.ModelConstant;
-import com.kelvem.common.RegxUtil;
 import com.kelvem.sample.system.model.SysAuthorityModel;
 
 

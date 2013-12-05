@@ -6,11 +6,11 @@ package com.kelvem.common.database.mysql;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.kelvem.common.KLog;
 import com.kelvem.common.database.base.DataBaseSession;
 import com.kelvem.common.database.model.ColumnModel;
 import com.kelvem.common.database.model.SchemaModel;
 import com.kelvem.common.database.model.TableModel;
+import com.kelvem.common.utils.KLog;
 
 /**
  * @author kelvem

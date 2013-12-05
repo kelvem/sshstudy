@@ -568,9 +568,8 @@ public class Hibernate3DaoBase<T extends Serializable,PK extends Serializable> e
 	 */
 	protected Date getCurrentSysDate(){
 		return this.getHibernateTemplate().execute(new HibernateCallback<Date>() {
-			@Override
-			public Date doInHibernate(Session arg0) throws HibernateException,
-					SQLException {
+			
+			public Date doInHibernate(Session arg0) throws HibernateException, SQLException {
 				return (Date)arg0.createSQLQuery("select sysdate from dual").uniqueResult();
 			}
 			

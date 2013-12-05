@@ -28,7 +28,6 @@ public class AuthCreaterFilter implements Filter {
 
 	@Autowired SysAuthorityService sysAuthorityService;
 
-	@Override
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain) throws IOException, ServletException {
 
 		HttpServletRequest request = (HttpServletRequest) servletRequest;
@@ -59,12 +58,10 @@ public class AuthCreaterFilter implements Filter {
 
 	}
 
-	@Override
 	public void init(FilterConfig arg0) throws ServletException {
 		
 	}
 	
-	@Override
 	public void destroy() {
 		
 	}

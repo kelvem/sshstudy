@@ -55,7 +55,6 @@ public class ActionBase0713 extends ActionSupport implements SessionAware, Reque
 	 * @return void
 	 * @see
 	 */
-	@Override
 	public void setRequest(Map<String, Object> request) {
 		this.request = request;	
 	}
@@ -67,7 +66,6 @@ public class ActionBase0713 extends ActionSupport implements SessionAware, Reque
 	 * @return void
 	 * @see
 	 */
-	@Override
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
@@ -79,7 +77,6 @@ public class ActionBase0713 extends ActionSupport implements SessionAware, Reque
 	 * @return void
 	 * @see
 	 */
-	@Override
 	public void setParameters(Map<String, String[]> parameters) {
 		this.parameters = parameters;
 	}

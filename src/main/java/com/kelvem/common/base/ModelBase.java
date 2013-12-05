@@ -10,7 +10,7 @@
 
 package com.kelvem.common.base;
 
-import com.kelvem.common.ObjectUtil;
+import com.kelvem.common.utils.ObjectUtil;
 
 /**
  * <p>ModelBase</p>

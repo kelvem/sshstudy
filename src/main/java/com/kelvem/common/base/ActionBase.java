@@ -69,7 +69,6 @@ public class ActionBase extends ActionSupport implements SessionAware, RequestAw
 	 * @return void
 	 * @see
 	 */
-	@Override
 	public void setRequest(Map<String, Object> request) {
 		this.request = request;	
 	}
@@ -81,7 +80,6 @@ public class ActionBase extends ActionSupport implements SessionAware, RequestAw
 	 * @return void
 	 * @see
 	 */
-	@Override
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
@@ -93,7 +91,6 @@ public class ActionBase extends ActionSupport implements SessionAware, RequestAw
 	 * @return void
 	 * @see
 	 */
-	@Override
 	public void setParameters(Map<String, String[]> parameters) {
 		this.parameters = parameters;
 	}
@@ -435,6 +432,7 @@ public class ActionBase extends ActionSupport implements SessionAware, RequestAw
 
 	}
 
+	@SuppressWarnings("unchecked")
 	public void logRequestAttributes() {
 		
 		log.info("【AttributeNames】");
@@ -445,6 +443,7 @@ public class ActionBase extends ActionSupport implements SessionAware, RequestAw
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	public void logRequestParameters() {
 
 		log.info("【ParameterNames】");
@@ -455,6 +454,7 @@ public class ActionBase extends ActionSupport implements SessionAware, RequestAw
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	public void logRequestHeaders() {
 
 		log.info("【HeaderNames】");

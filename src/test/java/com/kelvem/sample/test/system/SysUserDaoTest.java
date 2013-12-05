@@ -1,11 +1,10 @@
 package com.kelvem.sample.test.system;
 
-import static org.junit.Assert.*;
-
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 
-public class SysUserDaoTest {
+public class SysUserDaoTest extends AbstractTransactionalJUnit4SpringContextTests{
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {

@@ -12,7 +12,7 @@ package com.kelvem.common.interceptor;
 
 import org.apache.log4j.Logger;
 
-import com.kelvem.common.ExceptionUtil;
+import com.kelvem.common.utils.ExceptionUtil;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
 
