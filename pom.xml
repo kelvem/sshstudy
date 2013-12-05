@@ -9,11 +9,11 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
-		<struts2.version>2.3.1.2</struts2.version>
-		<springframework.version>3.0.5.RELEASE</springframework.version>
+		<struts2.version>2.3.14.3</struts2.version>
+		<springframework.version>3.2.5.RELEASE</springframework.version>
 		<struts2-jquery.version>3.3.3</struts2-jquery.version>
 		<struts2-bootstrap.version>1.2.1</struts2-bootstrap.version>
-		<spring.version>3.0.5.RELEASE</spring.version>
+		<springsecurity.version>3.0.5.RELEASE</springsecurity.version>
 	</properties>
 
 	<dependencies>
@@ -28,26 +28,26 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
-			<version>2.4</version>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
-			<artifactId>jsp-api</artifactId>
-			<version>2.0</version>
-			<scope>provided</scope>
+			<artifactId>jstl</artifactId>
+			<version>1.1.2</version>
 		</dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.1.2</version>
-        </dependency>
-        <dependency>
-            <groupId>taglibs</groupId>
-            <artifactId>standard</artifactId>
-            <version>1.1.2</version>
-        </dependency>
-        <!-- end for servlet/jsp/jstl -->
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		<!-- end for servlet/jsp/jstl -->
 
 		<!-- begin for apache commons -->
 		<dependency>
@@ -125,11 +125,6 @@
 		
 		<!-- begin for Spring dependencies -->
 		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjweaver</artifactId>
-			<version>1.6.8</version>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
 			<version>${springframework.version}</version>
@@ -161,6 +156,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
+			<artifactId>spring-expression</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
@@ -186,14 +186,14 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>${springframework.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${springframework.version}</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.6.8</version>
 		</dependency>
 		<!-- end for Spring dependencies -->
 
@@ -201,6 +201,11 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
+			<version>4.1.4.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
 			<version>4.1.4.Final</version>
 		</dependency>
 		<dependency>
@@ -213,7 +218,7 @@
 			<artifactId>hibernate-c3p0</artifactId>
 			<version>4.1.4.Final</version>
 		</dependency>
-		<!-- 
+		<!--
         <dependency>
             <groupId>c3p0</groupId>
             <artifactId>c3p0</artifactId>
@@ -253,13 +258,57 @@
 			<artifactId>activemq-pool</artifactId>
 			<version>5.8.0</version>
 		</dependency>
+		<!-- end for activemq -->
 
+		<!-- begin for activemq -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${springsecurity.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-acl</artifactId>
+			<version>${springsecurity.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${springsecurity.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${springsecurity.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-aspects</artifactId>
+			<version>${springsecurity.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${springsecurity.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-cas-client</artifactId>
+			<version>${springsecurity.version}</version>
+		</dependency>
 		<!-- end for activemq -->
 
         <dependency>
             <groupId>net.sf.ezmorph</groupId>
             <artifactId>ezmorph</artifactId>
             <version>1.0.6</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <version>2.2.3</version>
+            <classifier>jdk15</classifier>
         </dependency>
 
 
